@@ -1,0 +1,26 @@
+/* Temu Dark Mode CSS */
+html.temu-darkmode-enabled {
+  filter: invert(var(--temu-dark-intensity, 1)) hue-rotate(180deg);
+  color-scheme: dark;
+}
+
+html.temu-darkmode-enabled img,
+html.temu-darkmode-enabled picture,
+html.temu-darkmode-enabled video,
+html.temu-darkmode-enabled canvas,
+html.temu-darkmode-enabled svg,
+html.temu-darkmode-enabled iframe,
+html.temu-darkmode-enabled [style*="background-image"] {
+  filter: invert(var(--temu-dark-intensity, 1)) hue-rotate(180deg);
+}
+
+/* Skip re-inversion for images when smart invert is disabled */
+html.temu-darkmode-enabled.no-smart-invert img,
+html.temu-darkmode-enabled.no-smart-invert picture,
+html.temu-darkmode-enabled.no-smart-invert video,
+html.temu-darkmode-enabled.no-smart-invert canvas,
+html.temu-darkmode-enabled.no-smart-invert svg,
+html.temu-darkmode-enabled.no-smart-invert iframe,
+html.temu-darkmode-enabled.no-smart-invert [style*="background-image"] {
+  filter: none;
+}
